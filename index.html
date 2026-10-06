@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chef Fatso | Poolside cafe in Rajkot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8ECDD;--tx:#3A1B10;--mu:#7A5444;--sf:#FFF6EA;--tc:#C65D3B;--dp:#4E1F11;--gd:#E3AE62;--pm:#2E5B3C;--pl:#1C86C0;--rd:#D9302B;--ln:#3a1b1022;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1A0E09;--tx:#F8ECDD;--mu:#C9A892;--sf:#2A1710;--ln:#f8ecdd22}}
+:root[data-theme=dark]{--bg:#1A0E09;--tx:#F8ECDD;--mu:#C9A892;--sf:#2A1710;--ln:#f8ecdd22}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--tx);font:400 1.05rem/1.65 Figtree,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.dp{font-family:'Bagel Fat One',Figtree,sans-serif;font-weight:400;line-height:1;margin:0}
+h2{font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.01em}h3{font-size:1.4rem}p{margin:0 0 1em}a{color:inherit}
+img,video{display:block;max-width:100%}img,video{object-fit:cover}
+:focus-visible{outline:3px solid var(--gd);outline-offset:3px}
+.w{max-width:1200px;margin:auto}.s{padding:clamp(64px,10vw,130px) 5vw}.tc{background:var(--tc);color:#FFF3E3}.pm{background:var(--pm);color:#FFF3E3}
+.mu{color:var(--mu)}.tc .mu{color:#FFE3C8}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,80px);align-items:center}
+.arch{border-radius:999px 999px 20px 20px;overflow:hidden}.arch img,.arch video{width:100%;height:100%}
+.btn{display:inline-block;padding:.8em 1.6em;border-radius:99px;background:var(--rd);color:#fff;text-decoration:none;font-weight:700;border:2px solid var(--rd);transition:transform .2s,background .2s;cursor:pointer;font:inherit;font-weight:700}
+.btn:hover{transform:translateY(-3px) rotate(-1.5deg)}.btn.o{background:transparent;color:inherit;border-color:currentColor}
+.logo{display:inline-block;font-family:'Bagel Fat One';background:var(--rd);color:#fff;padding:.15em .6em;border-radius:14px;transform:rotate(-4deg);text-decoration:none;line-height:1.1}
+/* loader */
+#ld{position:fixed;inset:0;z-index:99;background:var(--tc);display:grid;place-items:center;align-content:center;gap:22px;transition:opacity .7s .55s}
+#ld.done{opacity:0;pointer-events:none}
+.orb{position:relative;width:170px;height:170px;border-radius:50%;overflow:hidden;border:5px solid #FFF3E3;background:#8f3a20;display:grid;place-items:center;transition:transform .9s cubic-bezier(.7,0,.3,1);--p:0}
+#ld.done .orb{transform:scale(16)}
+.wt{position:absolute;inset:0;background:var(--pl);transform:translateY(calc(100% - var(--p)*1%))}
+.wt:before{content:"";position:absolute;left:0;right:0;top:-11px;height:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12'%3E%3Cpath d='M0 6Q30 0 60 6T120 6V12H0Z' fill='%231C86C0'/%3E%3C/svg%3E") repeat-x;animation:wv 1.2s linear infinite}
+@keyframes wv{to{background-position-x:120px}}
+.orb b{position:relative;font:400 2.6rem 'Bagel Fat One';color:#fff;text-shadow:0 2px 8px #0006;transition:opacity .3s}#ld.done b{opacity:0}
+#ld .logo{font-size:2.4rem}#ld p{margin:0;color:#FFE3C8;font-size:.95rem}
+#wp{position:fixed;inset:0;z-index:70;background:var(--pm);transform:translateY(100%);pointer-events:none;display:grid;place-items:center}
+/* nav */
+#nv{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top,0px)) 4vw 14px;transition:background .3s,backdrop-filter .3s}
+#nv.sc{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px)}
+#nv .logo{font-size:1.3rem;color:#fff}
+nav{display:flex;gap:6px}nav a{text-decoration:none;padding:.4em 1em;border-radius:99px;font-weight:500;transition:background .2s}
+nav a:hover{background:var(--ln)}nav a.on{background:var(--tx);color:var(--bg)}
+#nv.h:not(.sc) nav a:not(.on),#nv.h:not(.sc) #th{color:#fff}
+#th{border:2px solid currentColor;background:none;color:inherit;border-radius:99px;padding:.35em .9em;font:600 .85rem Figtree;cursor:pointer}
+.pg{display:none}.pg.on{display:block}
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;color:#FFF3E3;padding:120px 5vw 70px;isolation:isolate}
+.hero>img{position:absolute;inset:-4%;width:108%;height:108%;z-index:-2}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#2a0f0866,#2a0f0899 55%,#1a0904ee)}
+.hero .w{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:end;width:100%}
+.hero h1{font-size:clamp(3.6rem,14vw,11rem);letter-spacing:-.03em;line-height:.82;color:var(--gd)}
+.hero h1 i{display:inline-block;font-style:normal;transform:translateY(120%);opacity:0}
+.go .hero h1 i{animation:up .8s cubic-bezier(.2,.9,.2,1) forwards;animation-delay:calc(var(--i)*60ms + 500ms)}
+@keyframes up{to{transform:none;opacity:1}}
+.hero p{max-width:34ch;font-size:1.2rem;margin:1.2em 0 1.6em}
+.ph{width:min(250px,60vw);aspect-ratio:9/16;border-radius:34px;border:7px solid #1b0d08;overflow:hidden;box-shadow:0 30px 60px #0008;justify-self:center;background:#000;transform:rotate(4deg);transition:transform .4s}
+.ph:hover{transform:rotate(0) scale(1.04)}.ph video{width:100%;height:100%}
+.ch{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.ch span{border:1.5px solid currentColor;border-radius:99px;padding:.15em .9em;font-size:.92rem;font-weight:500}
+.mq{background:var(--pm);color:#FFF3E3;overflow:hidden;white-space:nowrap;padding:14px 0;font:400 1.4rem 'Bagel Fat One'}
+.mq div{display:inline-flex;gap:0;animation:mq 30s linear infinite}.mq span{padding:0 1.2rem;display:inline-flex;align-items:center;gap:2.4rem}
+.mq span:after{content:"";width:12px;height:12px;border-radius:50%;background:var(--gd)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px;align-items:start}
+.tri>div:nth-child(2){margin-top:50px}.tri .arch{aspect-ratio:3/4;margin-bottom:18px}
+.tilt{transition:transform .25s;will-change:transform}
+.sig{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.sig a{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;color:#fff;text-decoration:none;display:flex;align-items:end;padding:20px}
+.sig img{position:absolute;inset:0;width:100%;height:100%;transition:transform .6s}.sig a:hover img{transform:scale(1.08)}
+.sig a:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,#1a0904dd)}.sig h3{position:relative;z-index:1}
+.ban{text-align:center;position:relative;overflow:hidden}.ban h2{font-size:clamp(2.4rem,8vw,6rem)}
+/* menu */
+.top{padding:140px 5vw 40px}.top h1{font-size:clamp(3rem,10vw,7.5rem);letter-spacing:-.02em}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0}
+.tabs button{border:2px solid var(--tx);background:none;color:var(--tx);border-radius:99px;padding:.5em 1.2em;font:600 1rem Figtree;cursor:pointer;transition:.2s}
+.tabs button.on{background:var(--tc);border-color:var(--tc);color:#fff}
+#mp{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,5vw,70px);align-items:start;margin-top:40px}
+#mp .arch{aspect-ratio:3/4;position:sticky;top:90px}
+#ml{list-style:none;padding:0;margin:26px 0 0}#ml li{padding:18px 0;border-top:1.5px solid var(--ln)}#ml p{margin:.3em 0 0;color:var(--mu)}
+/* vibe */
+.gr{columns:3;column-gap:18px}.gr button{all:unset;display:block;position:relative;margin-bottom:18px;border-radius:18px;overflow:hidden;cursor:zoom-in;width:100%}
+.gr button:focus-visible{outline:3px solid var(--gd)}.gr img{width:100%;transition:transform .5s}.gr button:hover img{transform:scale(1.06)}
+.gr .v:after{content:"";position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px;border-radius:50%;background:#D9302Bdd url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l9 6-9 6z' fill='white'/%3E%3C/svg%3E") center/60% no-repeat}
+#lb{position:fixed;inset:0;z-index:80;background:#0009;backdrop-filter:blur(8px);display:none;place-items:center;padding:4vw}#lb.on{display:grid}
+#lc>*{max-height:86vh;max-width:90vw;border-radius:16px}#lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:18px;font-size:2rem;background:none;border:0;color:#fff;cursor:pointer}
+/* nights/visit */
+.vs{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}.vs>div{background:var(--sf);border:1px solid var(--ln);border-radius:24px;padding:clamp(22px,4vw,40px)}
+.vs h3{margin-bottom:.5em}.vs dl{margin:1em 0 1.4em;display:grid;gap:.7em}.vs dt{font-weight:700}.vs dd{margin:0;color:var(--mu)}
+.on-b{display:inline-block;border-radius:99px;padding:.2em 1em;font-weight:700;font-size:.92rem;background:var(--pm);color:#fff}.on-b.x{background:var(--mu)}
+.ft{background:var(--dp);color:#F8ECDD;padding:56px 5vw 90px}.ft .w{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between}.ft a{opacity:.85}
+@media(max-width:860px){.g2,.hero .w,#mp,.vs{grid-template-columns:1fr}.tri,.sig{grid-template-columns:1fr}.tri>div:nth-child(2){margin-top:0}.gr{columns:2}.ph{justify-self:start;margin-top:10px}#mp .arch{position:static}
+nav{position:fixed;left:50%;bottom:calc(12px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--tx);padding:5px;box-shadow:0 8px 30px #0006}nav a{color:var(--bg)!important;font-size:.88rem;padding:.45em .75em}nav a.on{background:var(--tc);color:#fff!important}.hero{padding-top:100px}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition-duration:.01s!important}.rv{opacity:1;transform:none}}
+
+:root{--gd:#E8B96A;--gd2:#B8832F}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#150A06;--sf:#27150E}}:root[data-theme=dark]{--bg:#150A06;--sf:#27150E}
+html{-webkit-tap-highlight-color:transparent}
+body{background:radial-gradient(900px 500px at 85% -5%,#E8B96A30,transparent 70%),var(--bg);background-attachment:fixed}
+body:after{content:"";position:fixed;inset:0;z-index:95;pointer-events:none;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+h2,h3,.top h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:-.01em}
+h2{font-size:clamp(2.4rem,6.4vw,4.6rem);line-height:1.02}h3{font-size:1.7rem;line-height:1.1}
+.top h1{font-style:italic;font-weight:500;font-size:clamp(3.8rem,15vw,9rem);color:var(--tx)}
+.hero h1{font-family:'Bagel Fat One',sans-serif;font-size:clamp(3.4rem,17vw,11rem);filter:drop-shadow(0 8px 24px #0007)}
+.wd{display:inline-block;white-space:nowrap}
+.hero h1 i{background:linear-gradient(180deg,#FFEFC9,#E8B96A 55%,#B8832F);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .01em .1em}
+.logo{white-space:nowrap}
+.hero>img{animation:kb 20s ease-in-out infinite alternate;translate:0 calc(var(--sy,0)*1px)}@keyframes kb{to{scale:1.12}}
+.ff{position:absolute;left:var(--x);top:var(--y);width:5px;height:5px;border-radius:50%;background:#FFD98A;box-shadow:0 0 12px 3px #FFD98A99;opacity:0;pointer-events:none;animation:fl var(--d) ease-in-out infinite}
+@keyframes fl{50%{opacity:.95;transform:translate(var(--dx),-70px)}}
+.arch{outline:1px solid #E8B96A99;outline-offset:7px}.arch img{scale:1.2}
+.btn{position:relative;overflow:hidden;background:linear-gradient(135deg,#E5413A,#A91B1B);min-height:48px;transition:transform .25s}
+.btn:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,#fff7 50%,transparent 70%);transform:translateX(-130%);animation:sw 4.5s infinite}@keyframes sw{40%,100%{transform:translateX(130%)}}
+.btn:active,.tilt:active{transform:scale(.96)}
+.ph{animation:bob 6s ease-in-out infinite;outline:1px solid #E8B96A99;outline-offset:5px}@keyframes bob{50%{translate:0 -12px}}
+.tilt.rv{transition:opacity .8s,transform .25s}
+.vm{overflow:hidden;background:var(--dp);padding:20px 0 46px}.vm div{display:flex;width:max-content;animation:mq 45s linear infinite}.vm.r div{animation-direction:reverse}
+.vm video{width:150px;aspect-ratio:9/16;border-radius:18px;flex:none;margin-right:14px;outline:1px solid #E8B96A66}.vm video:nth-child(even){margin-top:26px}
+.gr video{width:100%;aspect-ratio:9/16;display:block}.gr .v:after{display:none}
+#ml li{animation:li .6s both;animation-delay:calc(var(--n)*90ms)}@keyframes li{from{opacity:0;transform:translateX(24px)}}
+#pb{position:fixed;top:0;left:0;right:0;height:3px;z-index:90;background:linear-gradient(90deg,var(--gd),var(--rd));transform-origin:0 50%;transform:scaleX(0)}
+.orb{outline:1px solid var(--gd);outline-offset:10px}
+#fab{position:fixed;right:14px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:55;background:linear-gradient(135deg,#F2CC83,#B8832F);color:#2a1008;font-weight:700;padding:.85em 1.3em;border-radius:99px;text-decoration:none;box-shadow:0 10px 30px #0006;animation:pl 2.6s infinite}
+@keyframes pl{0%{box-shadow:0 10px 30px #0006,0 0 0 0 #E8B96Aaa}70%,100%{box-shadow:0 10px 30px #0006,0 0 0 16px #E8B96A00}}
+.rs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.rc{display:flex;flex-direction:column;gap:10px;background:var(--sf);border:1px solid var(--gd);border-radius:26px;padding:clamp(22px,4vw,34px);text-decoration:none;transition:transform .3s,opacity .8s}
+a.rc:hover{transform:translateY(-6px)}a.rc:active{transform:scale(.98)}.rc b{font:600 1.9rem/1 'Cormorant Garamond',serif}.rc span{color:var(--mu)}.rc em{font-style:normal;font-weight:700;margin-top:auto;padding-top:10px}
+.rs>a:first-child{background:var(--tc);color:#fff;border-color:var(--tc)}.rs>a:first-child span,.rc.wa span{color:#FFEBD8}.rc.wa{background:#1F7A4A;color:#fff;border-color:#1F7A4A}
+.fm{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px}.fm b,.fm span,.fm textarea,.fm .btn,.fm output{grid-column:1/-1}
+.fm input,.fm textarea{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--ln);border-radius:14px;padding:.8em 1em;width:100%;min-height:50px}
+.fm output{color:var(--pm);font-weight:700}
+.ft{padding-bottom:130px}
+@media(hover:none){.tilt{transform:none!important}}
+@media(min-width:861px){#fab{bottom:26px;right:26px}.vm video{width:210px}}
+@media(max-width:860px){
+.s{padding:64px 5vw}.top{padding-top:110px}.rs,.fm{grid-template-columns:1fr}
+.hero .ph{position:absolute;top:92px;right:5vw;width:108px;border-width:4px;border-radius:24px;margin:0}
+.tri,.sig{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;margin:36px -5vw 0;padding:8px 5vw 14px;scrollbar-width:none}.tri::-webkit-scrollbar,.sig::-webkit-scrollbar,.tabs::-webkit-scrollbar{display:none}
+.tri>div,.sig a{flex:0 0 74vw;scroll-snap-align:center}.tri>div:nth-child(2){margin-top:0}
+.tabs{flex-wrap:nowrap;overflow-x:auto;margin:28px -5vw 0;padding:0 5vw;scrollbar-width:none}.tabs button{white-space:nowrap;flex:none;min-height:46px}
+#mp .arch{aspect-ratio:5/4;border-radius:170px 170px 20px 20px}.gr{columns:2;column-gap:10px}.gr button{margin-bottom:10px}
+nav{background:#27150Eee;backdrop-filter:blur(14px);border:1px solid #E8B96A66}}
+</style></head>
+<body>
+<div id="ld"><div class="orb" id="ob"><div class="wt"></div><b id="pc">0</b></div><span class="logo">Chef Fatso</span><p>Filling the pool...</p></div>
+<div id="pb"></div><div id="wp"><span class="logo" style="font-size:3rem">Chef Fatso</span></div>
+<header id="nv"><a href="#home" class="logo">Chef Fatso</a>
+<nav><a href="#home">Home</a><a href="#menu">Menu</a><a href="#vibe">The Vibe</a><a href="#nights">Nights</a><a href="#visit">Visit</a></nav>
+<button id="th" aria-label="Switch between day and night look">Night mode</button></header>
+
+<main>
+<section class="pg" id="home">
+<div class="hero"><img data-a="pool" alt="Poolside seating under thatch roofs and palms at Chef Fatso"><div class="w"><div>
+<h1 data-split aria-label="Chef Fatso">Chef Fatso</h1>
+<p>A Bali-and-Goa getaway with a pool at its heart, tucked away on Kalavad Road, Rajkot.</p>
+<a class="btn" href="#menu">See the menu</a> <a class="btn o" href="#visit">Plan your visit</a>
+<div class="ch" style="margin-top:26px"><span>100% pure veg</span><span>Open 6 PM to 2 AM</span><span id="ob2"></span></div></div>
+<div class="ph" data-d="14"><video data-a="v_reel" muted loop playsinline preload="metadata"></video></div></div></div>
+<div class="mq" aria-hidden="true"><div><span>Continental</span><span>Italian</span><span>Mexican</span><span>Fusion</span><span>Pure veg</span><span>Dry bar</span><span>Dog friendly</span><span>Live acoustic</span><span>Continental</span><span>Italian</span><span>Mexican</span><span>Fusion</span><span>Pure veg</span><span>Dry bar</span><span>Dog friendly</span><span>Live acoustic</span></div></div>
+<div class="s"><div class="w g2">
+<div class="arch rv" style="aspect-ratio:4/5"><img data-a="f_seat" alt="Lounge seating glowing under palm trees at night"></div>
+<div class="rv"><h2>Palm trees, thatch roofs and a pool in the middle of Rajkot.</h2><p class="mu" style="margin-top:1em">Chef Fatso is an open-air cafe built like a holiday. Cottages with thatched roofs, clusters of cosy seating and lush greenery wrap around a small pool, and the lights come on as the evening does.</p><p class="mu">Everything on the menu is pure vegetarian, with Continental, Italian, Mexican and fusion plates made to share across a long table.</p><a class="btn o" href="#vibe">Wander the vibe</a></div></div></div>
+<div class="s pm"><div class="w"><h2>Three reasons to stay late</h2>
+<div class="tri">
+<div class="rv"><div class="arch tilt"><img data-a="pool" alt="Pool and cabins"></div><h3>Poolside cabins</h3><p>Thatched dining cottages sit just steps from the water.</p></div>
+<div class="rv"><div class="arch tilt"><img data-a="f_drink" alt="Mocktail at the dry bar"></div><h3>The Dry Bar</h3><p>A bar given over entirely to mocktails and gourmet coffee blends.</p></div>
+<div class="rv"><div class="arch tilt"><img data-a="f_sign" alt="Chef Fatso glowing sign above the bar"></div><h3>Live evenings</h3><p>Acoustic music drifts across the courtyard after dark.</p></div></div></div></div>
+<div class="s"><div class="w"><h2>What the regulars order</h2>
+<div class="sig">
+<a href="#menu" class="tilt rv"><img data-a="f_pasta" alt="Shell pasta in rosa sauce"><h3>Conch Creme Rosa Pasta</h3></a>
+<a href="#menu" class="tilt rv"><img data-a="f_ingr" alt="Fresh ingredients: tomatoes, mushrooms, pasta and spices"><h3>Pesto Pizza and Burrito Bowls</h3></a>
+<a href="#menu" class="tilt rv"><img data-a="f_coffee" alt="Gourmet coffee"><h3>Slush margaritas and coffee</h3></a></div></div></div>
+<div class="s tc"><div class="w g2"><div class="rv"><h2>Before the doors open</h2><p style="margin-top:1em">Every evening starts early: the pool gets cleaned, the cottages are set and the kitchen is stocked with fresh produce. Watch how a night at Chef Fatso comes together.</p><a class="btn" style="background:#FFF3E3;color:var(--dp);border-color:#FFF3E3" href="#nights">See the nights</a></div>
+<div class="ph" style="justify-self:center;transform:rotate(-3deg)"><video data-a="v_story" muted loop playsinline preload="metadata"></video></div></div></div>
+<div class="s ban"><h2>Table for tonight?</h2><p class="mu" style="margin:1em 0 1.6em">Reservations are welcome, and so are families, groups and dogs.</p><a class="btn" href="#reserve">Reserve a table</a> <a class="btn o" href="#visit">Find us</a></div>
+</section>
+
+<section class="pg" id="menu"><div class="top w"><h1>The menu</h1><p class="mu" style="max-width:52ch;margin-top:1em">Pure vegetarian, always. Pick a corner of the kitchen below.</p>
+<div class="tabs" id="tb" role="tablist"></div></div>
+<div class="s w" style="padding-top:0"><div id="mp"><div class="arch"><img id="mi" alt=""></div><div><h2 id="mt"></h2><p class="mu" id="mb" style="margin-top:.8em"></p><ul id="ml"></ul></div></div></div></section>
+
+<section class="pg" id="vibe"><div class="top w"><h1>The vibe</h1><p class="mu" style="max-width:52ch;margin-top:1em">Tap anything to take a closer look.</p></div>
+<div class="s w" style="padding-top:0"><div class="gr" id="gr"></div></div></section>
+
+<section class="pg" id="nights"><div class="top w"><h1>After dark</h1></div>
+<div class="s w" style="padding-top:0"><div class="g2">
+<div class="ph" style="width:min(300px,70vw);transform:rotate(-3deg)"><video data-a="v_night" muted loop playsinline preload="metadata"></video></div>
+<div><h2>When the sun sets, the courtyard comes alive.</h2><p class="mu" style="margin-top:1em">Evenings begin with acoustic music and mocktails at the dry bar, and on the big nights the lights go red, the DJ steps up and the whole place dances.</p><div class="arch" style="aspect-ratio:16/10;border-radius:20px;margin-top:20px"><img data-a="f_dj" alt="DJ playing under red lights"></div></div></div></div>
+<div class="s tc"><div class="w g2"><div><h2>Rajkot's spooky Halloween party</h2><p style="margin-top:1em">Theme nights turn the thatch and palms into something spookier. Watch the reel by @pavak_unadkat, and keep an eye on Chef Fatso's Instagram for the next one.</p><a class="btn" style="background:#FFF3E3;color:var(--dp);border-color:#FFF3E3" target="_blank" rel="noopener" href="https://www.instagram.com/cheffatso/">Follow Chef Fatso</a></div>
+<div class="ph" style="justify-self:center;transform:rotate(3deg)"><video data-a="v_hall" muted loop playsinline preload="metadata"></video></div></div></div></section>
+
+<section class="pg" id="visit"><div class="top w"><h1>Find us</h1><p class="mu" style="margin-top:1em"><span class="on-b" id="op"></span></p></div>
+<div class="s w" style="padding-top:0"><div class="vs">
+<div><h3>Chef Fatso, Kalavad Road</h3><p class="mu">The poolside flagship.</p><dl><div><dt>Address</dt><dd>Kalavad Road, opposite MTV, Vajdi, Rajkot, Gujarat 360005</dd></div><div><dt>Open</dt><dd>6 PM to 2 AM, all seven days</dd></div><div><dt>Phone</dt><dd>+91 87588 75883</dd></div></dl>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Chef+Fatso+Kalavad+Road+Vajdi+Rajkot">Get directions</a> <a class="btn o" href="tel:+918758875883">Call</a></div>
+<div><h3>Chef Fatso Express</h3><p class="mu">Quick bites for late-night cravings.</p><dl><div><dt>Address</dt><dd>Aalap Avenue, behind Alap Heritage, Maruti Nagar, Rajkot</dd></div><div><dt>Open</dt><dd>11 AM to 2 AM, daily</dd></div></dl>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Chef+Fatso+Aalap+Avenue+Maruti+Nagar+Rajkot">Get directions</a></div></div>
+<h2 id="rsv" style="margin:70px 0 10px">Reserve a table</h2><p class="mu">Choose whichever way suits you best.</p>
+<div class="rs"><a class="rc" href="tel:+918758875883"><b>Call us directly</b><span>Speak to the team and book instantly.</span><em>+91 87588 75883</em></a>
+<a class="rc wa" id="wa" target="_blank" rel="noopener" href="https://wa.me/918758875883"><b>WhatsApp us</b><span>Send a message and we will confirm your table.</span><em>Open WhatsApp</em></a>
+<form class="rc fm" id="fm"><b>Fill the form</b><span>Share your details and it opens as an email to us.</span>
+<input name="n" placeholder="Your name" required autocomplete="name"><input name="p" type="tel" placeholder="Phone number" required autocomplete="tel"><input name="d" type="date" required aria-label="Date"><input name="t" type="time" required aria-label="Time"><input name="g" type="number" min="1" max="30" placeholder="Number of guests" required><textarea name="m" rows="2" placeholder="Anything we should know? (optional)"></textarea>
+<button class="btn">Send by email</button><output id="fs"></output></form></div>
+<h2 style="margin:70px 0 24px">Good to know</h2><div class="ch" style="font-size:1.05rem"><span>Reservations welcome</span><span>Family and group friendly</span><span>Dogs welcome</span><span>Dry bar</span><span>100% pure veg</span><span>Order and pay at the counter first</span></div></div></section>
+</main>
+<footer class="ft"><div class="w"><div><span class="logo" style="font-size:1.6rem">Chef Fatso</span><p style="margin-top:14px;opacity:.8">Kalavad Road, Rajkot</p></div><div><a href="#menu">Menu</a><br><a href="#vibe">The Vibe</a><br><a href="#nights">Nights</a><br><a href="#visit">Visit</a></div><div>+91 87588 75883<br>6 PM to 2 AM daily</div></div></footer>
+<a id="fab" href="#reserve">Reserve</a>
+<div id="lb" role="dialog" aria-label="Preview"><button aria-label="Close">&times;</button><div id="lc"></div></div>
+
+<script>
+const A={"pool": "assets/img/pool.jpg", "f_interior": "assets/img/f_interior.jpg", "f_drink": "assets/img/f_drink.jpg", "f_sign": "assets/img/f_sign.jpg", "f_palm": "assets/img/f_palm.jpg", "f_ingr": "assets/img/f_ingr.jpg", "f_seat": "assets/img/f_seat.jpg", "f_pasta": "assets/img/f_pasta.jpg", "f_chef": "assets/img/f_chef.jpg", "f_coffee": "assets/img/f_coffee.jpg", "f_dj": "assets/img/f_dj.jpg", "f_party": "assets/img/f_party.jpg", "f_hall": "assets/img/f_hall.jpg", "v_reel": "assets/vid/v_reel.mp4", "v_dine": "assets/vid/v_dine.mp4", "v_night": "assets/vid/v_night.mp4", "v_story": "assets/vid/v_story.mp4", "v_hall": "assets/vid/v_hall.mp4"},P={"v_reel": "f_pasta", "v_dine": "f_interior", "v_night": "f_party", "v_story": "f_sign", "v_hall": "f_hall"};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+$$('[data-a]').forEach(e=>{e.src=A[e.dataset.a];if(e.tagName=='VIDEO')e.poster=A[P[e.dataset.a]]});
+let li=0;$$('[data-split]').forEach(h=>{h.innerHTML=h.textContent.split(' ').map(w=>`<span class="wd">${[...w].map(c=>`<i style="--i:${li++}" aria-hidden="true">${c}</i>`).join('')}</span>`).join(' ')});
+/* loader */
+let t0=performance.now(),D=rm?300:2800;
+(function f(n){let p=Math.min(1,(n-t0)/D);$('#ob').style.setProperty('--p',p*100);$('#pc').textContent=Math.round(p*100);
+p<1?requestAnimationFrame(f):(ld.classList.add('done'),setTimeout(()=>{document.body.classList.add('go');ld.remove()},1200))})(t0);
+/* pages */
+const pages=['home','menu','vibe','nights','visit'];let cur='';
+function swap(k){$$('.pg').forEach(p=>p.classList.toggle('on',p.id==k));$$('nav a').forEach(a=>a.classList.toggle('on',a.hash=='#'+k));nv.classList.toggle('h',k=='home');scrollTo(0,0);cur=k;obs()}
+let busy=0;
+function route(){let k=location.hash.slice(1);const r=k=='reserve';if(r)k='visit';if(!pages.includes(k))k='home';
+const fin=()=>r?setTimeout(()=>rsv.scrollIntoView({behavior:rm?'auto':'smooth'}),80):scrollTo(0,0);
+if(k==cur){fin();return}
+if(!cur||rm){swap(k);fin();return}
+if(busy)return;busy=1;const E='cubic-bezier(.7,0,.3,1)';
+wp.animate([{transform:'translateY(100%)'},{transform:'translateY(0)'}],{duration:420,easing:E,fill:'forwards'}).finished.then(()=>{swap(k);fin();return wp.animate([{transform:'translateY(0)'},{transform:'translateY(-100%)'}],{duration:480,delay:120,easing:E,fill:'forwards'}).finished}).then(()=>{busy=0;route()})}
+addEventListener('hashchange',route);
+addEventListener('scroll',()=>nv.classList.toggle('sc',scrollY>40),{passive:true});
+/* reveal + video autoplay */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.target.tagName=='VIDEO'){e.isIntersecting?(lz(e.target),e.target.play().catch(()=>{})):e.target.pause()}else if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.2});
+function obs(){$$('.pg.on .rv,.pg.on video').forEach(e=>io.observe(e))}
+/* tilt + hero parallax */
+document.addEventListener('pointermove',e=>{const t=e.target.closest('.tilt');if(t){const r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;t.style.transform=`perspective(700px) rotateY(${x*12}deg) rotateX(${-y*12}deg) scale(1.03)`}
+if(cur=='home'&&!rm){const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;$('.hero>img').style.transform=`translate(${-x*24}px,${-y*18}px)`}});
+document.addEventListener('pointerout',e=>{const t=e.target.closest&&e.target.closest('.tilt');if(t)t.style.transform=''});
+/* menu */
+const M={pasta:['Pasta and Pizza','f_pasta','Comfort plates with an Italian soul.',[['Conch Creme Rosa Pasta','Shell pasta tossed in a creamy blush rosa sauce, a house favourite.'],['Pesto Pizza','A fragrant basil pesto pizza that regulars keep coming back for.']]],
+mex:['Mexican','f_ingr','Bold flavours, built to share.',[['Burrito Bowls','Everything you love about a burrito, served in a bowl.'],['Tacos','Crisp shells loaded with fresh, zesty fillings.']]],
+bar:['Dry Bar and Coffee','f_coffee','Mocktails and gourmet coffee, no alcohol needed.',[['Frozen Slush Margaritas','Icy mocktail margaritas, the perfect pool-side cooler.'],['Signature Mocktails','Fresh, fruity and made at the dry bar.'],['Gourmet Coffee Blends','Specialty coffees for the late-evening crowd.']]],
+exp:['Fatso Express','f_chef','Fast, fun and fusion, from our Aalap Avenue counter.',[['Pizzas','Margherita, Pineapple Express, Spicy Paneer, Mexican Special and Jain options.'],['Vada Pav','From the classic masala to a cheesy butter version.'],['Sandwiches and Burgers','Bombay Toastie, Chipotle Paneer, club sandwiches and veggie burgers.'],['Noodles and Rice','Hakka noodles, Manchurian and fried rice.'],['Maggi Bowls','Butter veggie and cheese butter masala.'],['Samosa Fusions','Cheese jalapeno, cheese corn and cheese pizza.']]]};
+tb.innerHTML=Object.keys(M).map(k=>`<button role="tab" data-k="${k}">${M[k][0]}</button>`).join('');
+function menu(k){const m=M[k];$$('#tb button').forEach(b=>b.classList.toggle('on',b.dataset.k==k));mi.src=A[m[1]];mi.alt=m[0];mt.textContent=m[0];mb.textContent=m[2];
+ml.innerHTML=m[3].map((d,i)=>`<li style="--n:${i}"><h3>${d[0]}</h3><p>${d[1]}</p></li>`).join('');if(!rm)$('#mp').animate([{opacity:.2,transform:'translateY(14px)'},{opacity:1,transform:'none'}],{duration:450,easing:'ease-out'})}
+tb.onclick=e=>e.target.dataset.k&&menu(e.target.dataset.k);menu('pasta');
+/* gallery + lightbox */
+const G=[['pool'],['v_dine','v'],['f_sign'],['f_seat'],['v_story','v'],['f_interior'],['f_ingr'],['v_night','v'],['f_palm'],['f_drink'],['f_dj'],['f_party']];
+gr.innerHTML=G.map((g,i)=>`<button class="${g[1]=='v'?'v':''}" data-i="${i}" aria-label="Open ${g[1]=='v'?'video':'photo'} ${i+1}">${g[1]=='v'?`<video data-s="${g[0]}" muted loop playsinline preload="none"></video>`:`<img src="${A[g[0]]}" alt="Chef Fatso atmosphere">`}</button>`).join('');
+gr.onclick=e=>{const b=e.target.closest('button');if(!b)return;const g=G[b.dataset.i],v=g[1]=='v',el=document.createElement(v?'video':'img');el.src=A[g[0]];if(v){el.autoplay=el.loop=el.muted=true;el.playsInline=true}lc.replaceChildren(el);lb.classList.add('on')};
+lb.onclick=e=>{if(e.target==lb||e.target.tagName=='BUTTON'){lb.classList.remove('on');lc.replaceChildren()}};
+addEventListener('keydown',e=>e.key=='Escape'&&lb.onclick({target:lb}));
+/* theme + open now */
+const dk=()=>document.documentElement.dataset.theme?document.documentElement.dataset.theme=='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+const lab=()=>th.textContent=dk()?'Day mode':'Night mode';lab();
+th.onclick=()=>{document.documentElement.dataset.theme=dk()?'light':'dark';lab()};
+const h=parseInt(new Date().toLocaleString('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',hour12:false}))%24,isOpen=h>=18||h<2;
+op.textContent=ob2.textContent=isOpen?'Open right now':'Opens at 6 PM';op.classList.toggle('x',!isOpen);
+
+/* v2 */
+function lz(v){if(v.dataset.s&&!v.getAttribute('src'))v.src=A[v.dataset.s]}
+const KS=['v_dine','v_night','v_story','v_reel','v_hall'],strip=r=>`<div class="vm${r?' r':''}" aria-hidden="true"><div>${[...KS,...KS].map(x=>`<video data-s="${x}" muted loop playsinline preload="none"></video>`).join('')}</div></div>`;
+$('.mq').insertAdjacentHTML('afterend',strip());$('#vibe .top').insertAdjacentHTML('afterend',strip(1));$('#nights .top').insertAdjacentHTML('afterend',strip());
+$$('video[data-s]').forEach(v=>v.poster=A[P[v.dataset.s]]);
+$$('video').forEach(v=>{v.defaultMuted=v.muted=true});
+$$('.rs>*,.vs>div').forEach(e=>e.classList.add('rv'));
+$$('.tri>*,.sig>*,.rs>*,.vs>div').forEach((e,i)=>e.style.transitionDelay=(i%3)*120+'ms');
+const hr=$('.hero');for(let i=0;i<16;i++){const f=document.createElement('i');f.className='ff';f.style.cssText=`--x:${Math.random()*100}%;--y:${30+Math.random()*65}%;--d:${4+Math.random()*5}s;--dx:${Math.random()*60-30}px;animation-delay:${Math.random()*5}s`;hr.append(f)}
+let tk=0;function sc(){tk=0;const y=scrollY,H=document.documentElement.scrollHeight-innerHeight;pb.style.transform=`scaleX(${H>0?y/H:0})`;if(rm)return;
+if(cur=='home')$('.hero>img').style.setProperty('--sy',y*.22);$$('.pg.on .arch img').forEach(i=>{const r=i.parentNode.getBoundingClientRect();i.style.translate=`0 ${(r.top+r.height/2-innerHeight/2)*-.04}px`})}
+addEventListener('scroll',()=>{tk||(tk=1,requestAnimationFrame(sc))},{passive:true});
+const MAIL='reservations@cheffatso.com';
+wa.href='https://wa.me/918758875883?text='+encodeURIComponent('Hi Chef Fatso, I would like to reserve a table.');
+fm.elements.d.min=new Date().toISOString().slice(0,10);
+fm.onsubmit=e=>{e.preventDefault();const d=new FormData(fm),b=`Name: ${d.get('n')}\nPhone: ${d.get('p')}\nDate: ${d.get('d')}\nTime: ${d.get('t')}\nGuests: ${d.get('g')}\nNote: ${d.get('m')||'-'}`;
+const a=document.createElement('a');a.href=`mailto:${MAIL}?subject=${encodeURIComponent('Table request from '+d.get('n'))}&body=${encodeURIComponent(b)}`;a.click();fs.textContent='Opening your email app, just press send. Or write to '+MAIL}
+route();
+</script></body></html>
